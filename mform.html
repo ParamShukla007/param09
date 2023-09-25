@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mform.css">
+    </head>
+    <body>
+      <h1 id="title">ELEVATION EXPEDITIONS</h1>
+<p id="description">Please fill all the required details</p>
+      <div>
+
+<form id="survey-form" method="post">
+  <fieldset>
+<label for="name" id="name-label">Enter your Name: <input id="name" type="text" required placeholder="Virat Kohli" /></label>
+<label for="email" id="email-label">Enter your Email: <input id="email" type="email" required placeholder="xyz@gmail.com" /></label>
+<label for="age" id="number-label">Enter your Age: <input id="number" type="number" max="100" min="18" required placeholder="18" /></label> 
+</fieldset>
+<fieldset>
+<label>GENDER</label>
+<label><input type="radio" name="gender" value="gender" class="inline"  />Male</label>
+<label><input type="radio" name="gender" value="gender" class="inline"  />Female</label>
+</fieldset>
+<fieldset>
+<label>SELECT THE TYPE OF EXPEDITION (Check all that apply)</label>
+<label><input type="checkbox"  value="expedition" class="inline"  />Hiking</label>
+<label><input type="checkbox"  value="expedition" class="inline"  />Trekking</label>
+<label><input value="expedition" type="checkbox" class="inline"  />Rock Climbing</label>
+  </fieldset>
+      <fieldset>
+      <label>Mountain:</label>
+      <select id="dropdown">
+        <option value="">(select one)</option>
+        <option value="1">The Himalayas</option>
+        <option value="2">Mount Fuji</option>
+        <option value="3">Swiss Alps</option>
+        </select>
+      </fieldset>
+  <fieldset>
+    <label>Describe More About Your Plan: 
+      <textarea id="describe" rows="3" cols="30" name="describe">
+        </textarea>
+      </label>
+    </fieldset>
+    <input type="submit" value="Submit" id="submit"/>
+</form>
+</div>
+<script>
+    let d=document.getElementById('submit');
+    d.addEventListener('click',function run(){
+        alert("Form submitted succesfully");
+    });
+    </script>
+</body>
